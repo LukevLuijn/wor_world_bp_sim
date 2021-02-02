@@ -17,17 +17,33 @@ set(FastRTPS_LIBRARY_RELEASE /opt/ros/foxy/lib/libfastrtps.so)
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 
+# messages
+find_package(tf2_ros REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
+#find_package(rosidl_default_generators REQUIRED)
+#find_package(resource_retriever REQUIRED)
+
+#ament_export_dependencies(rosidl_default_runtime)
+
 include_directories(include/${PROJECT_NAME}/)
 
-add_executable(cup_node src/cup_node.cpp)
-ament_target_dependencies(cup_node rclcpp)
+add_executable(cup_node
+        src/cup_node.cpp
+        include/cup/cup_node.h)
 
-
-#target_include_directories(cup_node PUBLIC
-#  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-#  $<INSTALL_INTERFACE:include>)
+ament_target_dependencies(cup_node
+        rclcpp
+        tf2_ros
+        geometry_msgs
+        visualization_msgs)
 
 install(TARGETS cup_node
         DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY
+        resource
+        DESTINATION share/${PROJECT_NAME}/)
+
 
 ament_package()
