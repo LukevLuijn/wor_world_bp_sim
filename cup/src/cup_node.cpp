@@ -1,9 +1,15 @@
+
+#include "rclcpp/rclcpp.hpp"
 #include <cstdio>
 
-int main(int argc, char ** argv)
+class Cup : public rclcpp::Node
 {
-  (void) argc;
-  (void) argv;
+};
+
+int main(int argc, char** argv)
+{
+  (void)argc;
+  (void)argv;
 
   printf("hello world cup package\n");
   return 0;
