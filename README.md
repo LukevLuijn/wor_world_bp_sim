@@ -9,8 +9,6 @@
 |**Datum**   | 01-28-2021       |
 |**Versie**  | 2                |
 
---- 
-![Class diagram - CupNode](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/class_dia_cup_node.puml)
 ---
 
 ## Installatie instructies
@@ -35,19 +33,38 @@ minimaliseren. Deze onderdelen kunnen zichtbaar gemaakt worden door op de respec
 <details>
     <summary style="font-size:17px"> Structuur </summary>
 
-> **TODO**
+> **TODO** begeleidende tekst schrijven. <br>
+> **TODO** seq dia simulation. <br>
+> **TODO** seq dia arm_node. <br>
+> **TODO** sec dia cup node. <br>
+
+<!-- Diagrammen worden geladen via een plantuml proxy. Als de diagrammen niet ingeladen worden moet de pagina gerefreshed worden. -->
+![sequence diagram - simulation](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/seq_dia_simulation.puml "sequence diagram - simulation")
+
+<!-- Diagrammen worden geladen via een plantuml proxy. Als de diagrammen niet ingeladen worden moet de pagina gerefreshed worden. -->
+![sequence diagram - arm_node](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/seq_dia_arm_node.puml "sequence diagram - arm_node")
+
+<!-- Diagrammen worden geladen via een plantuml proxy. Als de diagrammen niet ingeladen worden moet de pagina gerefreshed worden. -->
+![sequence diagram - cup_node](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/seq_dia_cup_node.puml "sequence diagram - cup_node")
 
 </details>
 
 <details>
     <summary style="font-size:17px"> Samenhang </summary>
 
-> **TODO**
+> **TODO** begeleidende tekst schrijven. <br>
+> **TODO** class dia arm_node <br>
+
+<!-- Diagrammen worden geladen via een plantuml proxy. Als de diagrammen niet ingeladen worden moet de pagina gerefreshed worden. -->
+![class diagram - cup_node](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/class_dia_cup_node.puml "Class diagram - cup_node")
+
+<!-- Diagrammen worden geladen via een plantuml proxy. Als de diagrammen niet ingeladen worden moet de pagina gerefreshed worden. -->
+![class diagram - arm_node](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/class_dia_arm_node.puml "Class diagram - arm_node")
 
 </details>
 
 <details>
-    <summary style="font-size:17px"> Gedrag </summary>
+    <summary style="font-size:17px"> Realisatie </summary>
 
 > **TODO**
 
