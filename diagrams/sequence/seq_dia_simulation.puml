@@ -1,8 +1,8 @@
 @startuml
 skinparam backgroundColor transparent
-'https://plantuml.com/sequence-diagram
-
 autonumber
+
+box sequence diagram arm_node
 
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
