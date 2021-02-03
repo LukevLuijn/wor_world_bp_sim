@@ -10,9 +10,7 @@
 |**Versie**  | 2                |
 
 --- 
-![esp8266 flowchart](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/anoff/plantbuddy/master/assets/esp8266.iuml)
-
-
+![Class diagram - CupNode](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/LukevLuijn/wor_world_bp_sim/main/diagrams/class_dia_cup_node.puml)
 ---
 
 ## Installatie instructies
