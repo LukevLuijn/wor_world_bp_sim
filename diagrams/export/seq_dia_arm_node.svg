@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     contentScriptType="application/ecmascript" contentStyleType="text/css" height="244px" preserveAspectRatio="none"
+     style="width:320px;height:244px;" version="1.1" viewBox="0 0 320 244" width="320px" zoomAndPan="magnify">
+    <defs>
+        <filter height="300%" id="f5dy04xv6ki2r" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix"
+                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+    </defs>
+    <g>
+        <rect fill="#DDDDDD" height="229.2578" style="stroke: #A80036; stroke-width: 1.0;" width="305" x="4" y="4"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs"
+              textLength="216" x="48.5" y="16.0669">sequence diagram arm_node
+        </text>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="33" x2="33" y1="58.4297"
+              y2="194.9609"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="282" x2="282" y1="58.4297"
+              y2="194.9609"/>
+        <rect fill="#FEFECE" filter="url(#f5dy04xv6ki2r)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;"
+              width="46" x="8" y="23.1328"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32"
+              x="15" y="43.1279">Alice
+        </text>
+        <rect fill="#FEFECE" filter="url(#f5dy04xv6ki2r)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;"
+              width="46" x="8" y="193.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32"
+              x="15" y="213.9561">Alice
+        </text>
+        <rect fill="#FEFECE" filter="url(#f5dy04xv6ki2r)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;"
+              width="42" x="259" y="23.1328"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28"
+              x="266" y="43.1279">Bob
+        </text>
+        <rect fill="#FEFECE" filter="url(#f5dy04xv6ki2r)" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;"
+              width="42" x="259" y="193.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28"
+              x="266" y="213.9561">Bob
+        </text>
+        <polygon fill="#A80036" points="270,85.5625,280,89.5625,270,93.5625,274,89.5625"
+                 style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="33" x2="276" y1="89.5625" y2="89.5625"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs"
+              textLength="9" x="40" y="84.4966">1
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="149"
+              x="53" y="84.4966">Authentication Request
+        </text>
+        <polygon fill="#A80036" points="44,114.6953,34,118.6953,44,122.6953,40,118.6953"
+                 style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="38" x2="281" y1="118.6953"
+              y2="118.6953"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs"
+              textLength="9" x="50" y="113.6294">2
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="159"
+              x="63" y="113.6294">Authentication Response
+        </text>
+        <polygon fill="#A80036" points="270,143.8281,280,147.8281,270,151.8281,274,147.8281"
+                 style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0;" x1="33" x2="276" y1="147.8281" y2="147.8281"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs"
+              textLength="9" x="40" y="142.7622">3
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="203"
+              x="53" y="142.7622">Another authentication Request
+        </text>
+        <polygon fill="#A80036" points="44,172.9609,34,176.9609,44,180.9609,40,176.9609"
+                 style="stroke: #A80036; stroke-width: 1.0;"/>
+        <line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="38" x2="281" y1="176.9609"
+              y2="176.9609"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs"
+              textLength="9" x="50" y="171.895">4
+        </text>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="212"
+              x="63" y="171.895">another authentication Response
+        </text><!--MD5=[5fc3331bc641ae311964728f25933749]
+@startuml
+skinparam backgroundColor transparent
+autonumber
+
+box sequence diagram arm_node
+
+Alice -> Bob: Authentication Request
+Bob - -> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <- - Bob: another authentication Response
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 12:38:32 GMT 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 14-ea+33
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+-->
+    </g>
+</svg>
