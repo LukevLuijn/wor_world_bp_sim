@@ -1,0 +1,14 @@
+@startuml
+
+class ArmNode
+{
+
+--
+{method} +ArmNode();
+{method} +~ArmNode();
+}
+
+class rclcpp::Node{}
+rclcpp::Node->ArmNode
+
+@enduml
