@@ -1,0 +1,66 @@
+
+@startuml
+
+class CupNode {
+{field} -typedef States::CupState State;
+{field} -typedef visualization_msgs::msg::Marker Marker_msg;
+{field} -typedef geometry_msgs::msg::TransformStamped Trans_stamped_msg;
+{field} -typedef geometry_msgs::msg::Quaternion Quaternion_msg;
+{field} -typedef geometry_msgs::msg::Twist Twist_msg;
+{field} -typedef geometry_msgs::msg::Point Point_msg;
+{field} -typedef std_msgs::msg::ColorRGBA Color_msg;
+{field} -typedef geometry_msgs::msg::Pose Pose_msg;
+
+..variables..
+{field} -timer_ : rclcpp::TimerBase::SharedPtr
+{field} -header_frame_id_ : std::string
+
+..tf2_ros..
+{field} -buffer_ : tf2_ros::Buffer
+{field} -trans_listener_ : tf2_ros::TransformListener
+{field} -trans_broadcaster_ : tf2_ros::TransformBroadcaster
+
+..messages..
+{field} -trans_stamped_msg_ : Trans_stamped_msg
+{field} -marker_msg_ : Marker_msg
+{field} -twist_msg_ : Twist_msg
+
+..publishers..
+{field} -marker_pub_ : rclcpp::Publisher<Marker_msg>::SharedPtr
+{field} -twist_pub_ : rclcpp::Publisher<Twist_msg>::SharedPtr
+{field} -pose_pub_ : rclcpp::Publisher<Pose_msg>::SharedPtr
+
+..constants..
+{field} -QOS_VAL : rclcpp::QoS
+{field} -MESSSAGE_NAMESPACE : std::string
+{field} -FRAME_ID : std::string
+{field} -RESOURCE_PATH : std::string
+
+__
+{method} +CupNode()
+{method} +~CupNode()
+..callback..
+{method} -timerCallback() : void
+
+..publishers..
+{method} -broadcastTransform() : void
+{method} -publishMarker() : void
+{method} -publishTwist() : void
+{method} -publishPose() : void
+
+..setters..
+{method} -setCupColor() : void
+{method} -setCupPose() : void
+
+..initial..
+{method} -initMessages(Point_msg init_point) : void
+{method} -initMarker(Point_msg init_point) : void
+{method} -initTransform() : void
+}
+
+class rclcpp::Node{}
+rclcpp::Node->CupNode
+
+@enduml
+
+

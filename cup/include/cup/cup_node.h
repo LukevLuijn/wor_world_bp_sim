@@ -45,6 +45,7 @@ class CupNode : public rclcpp::Node
   typedef States::CupState State;                                  /// typedef cupstate
   typedef visualization_msgs::msg::Marker Marker_msg;              /// typedef maker message
   typedef geometry_msgs::msg::TransformStamped Trans_stamped_msg;  /// typedef transform stamped message
+  typedef geometry_msgs::msg::Quaternion Quaternion_msg;           /// typedef Quaternion message
   typedef geometry_msgs::msg::Twist Twist_msg;                     /// typedef twist message
   typedef geometry_msgs::msg::Point Point_msg;                     /// typedef point message
   typedef std_msgs::msg::ColorRGBA Color_msg;                      /// typedef color message
@@ -122,6 +123,18 @@ private:
    * Initializer of the transform stamped message, sets the base values.
    */
   void initTransform();
+
+  /**
+   *  Euler to quaternion conversion
+   *  @details https://en.wikipedia.org/wiki/Conversion_between_quaternions_and_Euler_angles
+   *
+   * @param roll
+   * @param pitch
+   * @param yaw
+   * @return
+   */
+  Quaternion_msg eulerToQuaternion(double roll, double pitch, double yaw);
+  static double quaternionToCupTilt(geometry_msgs::msg::Quaternion q);
 
 private:
   State current_state_ = State::STILL;                   /// current state of cup

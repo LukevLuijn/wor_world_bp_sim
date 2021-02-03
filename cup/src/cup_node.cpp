@@ -42,11 +42,21 @@ void CupNode::timerCallback()
 void CupNode::broadcastTransform()
 {
   // TODO check things
+  geometry_msgs::msg::TransformStamped transformStamped;
+  transformStamped = buffer_.lookupTransform(header_frame_id_, FRAME_ID, rclcpp::Time(0));
+
+  if (transformStamped.transform.translation.z > 0)  // above ground
+  {
+  }
+  else if (transformStamped.transform.translation.z < 0)  // below ground
+  {
+  }
+  else if (quaternionToCupTilt(transformStamped.transform.rotation) > M_PI / 4)  // tipped over
+  {
+  }
+
   try
   {
-    geometry_msgs::msg::TransformStamped transformStamped;
-    transformStamped = buffer_.lookupTransform(header_frame_id_, FRAME_ID, rclcpp::Time(0));
-
     trans_stamped_msg_.transform = transformStamped.transform;
     trans_stamped_msg_.header.frame_id = header_frame_id_;
   }
@@ -156,6 +166,29 @@ void CupNode::initTransform()
 
   // initial broadcast
   trans_broadcaster_.sendTransform(trans_stamped_msg_);
+}
+
+// Quaternion_msg CupNode::eulerToQuaternion(double roll, double pitch, double yaw)
+//{
+//  Quaternion_msg quaternion;
+//  quaternion.x = sin(roll / 2) * cos(pitch / 2) * cos(yaw / 2) - cos(roll / 2) * sin(pitch / 2) * sin(yaw / 2);
+//  quaternion.y = cos(roll / 2) * sin(pitch / 2) * cos(yaw / 2) + sin(roll / 2) * cos(pitch / 2) * sin(yaw / 2);
+//  quaternion.z = cos(roll / 2) * cos(pitch / 2) * sin(yaw / 2) - sin(roll / 2) * sin(pitch / 2) * cos(yaw / 2);
+//  quaternion.w = cos(roll / 2) * cos(pitch / 2) * cos(yaw / 2) + sin(roll / 2) * sin(pitch / 2) * sin(yaw / 2);
+//  return quaternion;
+//}
+
+double CupNode::quaternionToCupTilt(Quaternion_msg quaternion)
+{
+  tf2::Quaternion q{ quaternion.x, quaternion.y, quaternion.z, quaternion.w };
+  tf2::Vector3 bv{ 0, 0, 1 };
+  tf2::Vector3 cv = tf2::quatRotate(q, bv);
+
+  double m_BV_CV = cv.x() * bv.x() + cv.y() * bv.y() + cv.z() * bv.z();  // base vector times cup vector
+  double m_BV_BV = bv.x() * bv.x() + bv.y() * bv.y() + bv.z() * bv.z();  // base vector times base vector
+  double m_CV_CV = cv.x() * cv.x() + cv.y() * cv.y() + cv.z() * cv.z();  // cup vector times cup vector
+
+  return std::acos(m_BV_CV / (std::sqrt(m_CV_CV * sqrt(m_BV_BV))));
 }
 
 ////////

@@ -10,6 +10,10 @@
 |**Versie**  | 2                |
 
 --- 
+![esp8266 flowchart](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/anoff/plantbuddy/master/assets/esp8266.iuml)
+
+
+---
 
 ## Installatie instructies
 
@@ -23,12 +27,41 @@
 
 ---
 
+## Ontwerpdocumentatie
+
+In de onderstaande onderdelen staat de ontwerpdocumentatie van de simulatie opdracht verwerkt. Als eerste is de
+structuur van het systeem uitgewerkt, gevolgd door de samenhang van de verschillende componenten en tot slot het gedrag
+van het systeem. De verschillende onderdelen zijn verborgen achter inklapbare velden om de omvang van dit document te
+minimaliseren. Deze onderdelen kunnen zichtbaar gemaakt worden door op de respectievelijke pijltjes te klikken.
+
+<details>
+    <summary style="font-size:17px"> Structuur </summary>
+
+> **TODO**
+
+</details>
+
+<details>
+    <summary style="font-size:17px"> Samenhang </summary>
+
+> **TODO**
+
+</details>
+
+<details>
+    <summary style="font-size:17px"> Gedrag </summary>
+
+> **TODO**
+
+</details>
+
+---
+
 ## Behaalde eisen
 
 In de onderstaande onderdelen staan lijsten weergegeven (druk op het pijltje). Deze lijsten bevatten de verschillende
 eisen gesteld aan de opdracht. Door over de eis te 'hoveren' zal de tooltip de prioriteit en de beschrijving van de eis
-weergeven. <br>
-Voor elke eis staat vermeld of deze behaald is gevolgd door de reden waarom.
+weergeven. Voor elke eis staat vermeld of deze behaald is gevolgd door de reden waarom.
 
 <details>
      <summary> Package </summary>
@@ -63,8 +96,8 @@ Voor elke eis staat vermeld of deze behaald is gevolgd door de reden waarom.
 |[VC01](a "SHOULD &#124; Er kan op een willekeurige plek in de virtuele wereld een bekertje geplaatst worden.") |ja|De cup_node node luistert naar een x en y waarde meegegeven aan de executable, deze x en y waarde zijn de locatie waar de beker geplaatst wordt.|
 |[VC02](a "MUST &#124; Puliceert een 3D-visualisatie van het bekertje voor Rviz.")                              |ja|Door gebruik te maken van de MESH_RESOURCE van de marker kan er een .stl bestand ingeladen worden en weergegeven worden in RVIZ.|
 |[VC03](a "SHOULD &#124; Detecteert de relevante punten van de gripper.")                                       |nee|n/a|
-|[VC04](a "COULD &#124; Visualiseert de gedetecteerde punten van de gripper.")                                  |ja|Wanneer het bekertje beweegt zal het van kleur veranderen, wanneer het bekertje weer losgelaten wordt veranderd het ook van kleur. |
-|[VC05](a "SHOULD &#124; Visualiseert wanneer de gripper het bekertje vastheeft.")                              |nee|n/a|
+|[VC04](a "COULD &#124; Visualiseert de gedetecteerde punten van de gripper.")                                  |nee|n/a|
+|[VC05](a "SHOULD &#124; Visualiseert wanneer de gripper het bekertje vastheeft.")                              |ja|Wanneer het bekertje beweegt zal het van kleur veranderen, wanneer het bekertje weer losgelaten wordt veranderd het ook van kleur. |
 |[VC06](a "MUST &#124; Het bekertje beweegt mee met de gripper (als hij vastgehouden wordt).")                  |nee|n/a|
 |[VC07](a "MUST &#124; Het bekertje is onderhevig aan zwaartekracht wanneer het losgelaten wordt.")             |nee|n/a|
 |[VC08](a "MUST &#124; Het bekertje bepaalt en publiceert zijn positite.")                                      |ja|Het 'marker' bericht bevat een pose, deze pose wordt los van de marker naar een appart topic verstuurd (simulation/cup/pose).|
