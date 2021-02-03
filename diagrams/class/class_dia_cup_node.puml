@@ -1,5 +1,6 @@
-
 @startuml
+
+skinparam backgroundColor transparent
 
 class CupNode {
 {field} -typedef States::CupState State;
